@@ -13,3 +13,8 @@ def get_num_chars(content):
             else:
                 char_num[char] = 1
     return char_num
+
+def sort_num_chars(char_num):
+    char_count = [(key, char_num[key]) for key in char_num]
+    char_count.sort(key=lambda x: x[1], reverse=True)
+    return char_count
