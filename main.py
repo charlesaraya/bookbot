@@ -10,6 +10,9 @@ def get_book_text(filepath):
 def main():
     if len(sys.argv) == 2:
         filepath = sys.argv[1]
+    else:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
     print("============ BOOKBOT ============",
           f"Analyzing book found at {filepath}...",
           "----------- Word Count ----------")
